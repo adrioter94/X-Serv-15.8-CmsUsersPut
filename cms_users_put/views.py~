@@ -20,8 +20,8 @@ def processCMS_Users(request, recurso):
             fila = Page.objects.get(name=recurso)
             return HttpResponse(salida + "<br>" + fila.page)
         except Page.DoesNotExist:
-            return HttpResponseNotFound(salida\
-                                        + "<br>Page not found: /%s" % recurso)
+            return HttpResponseNotFound(salida +
+                                        "<br>Page not found: /%s" % recurso)
     elif request.method == "PUT":
         if request.user.is_authenticated():
             try:
@@ -32,5 +32,5 @@ def processCMS_Users(request, recurso):
             except:
                 return HttpResponseNotFound("Error")
         else:
-            return HttpResponseNotFound("No puedes modificarlo\
-                                         si no estas auntetificado")
+            return HttpResponseNotFound("No puedes modificarlo" +
+                                         " si no estas auntetificado")

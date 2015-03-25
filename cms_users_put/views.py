@@ -33,4 +33,4 @@ def processCMS_Users(request, recurso):
                 return HttpResponseNotFound("Error")
         else:
             return HttpResponseNotFound("No puedes modificarlo" +
-                                         " si no estas auntetificado")
+                                        " si no estas auntetificado")
